@@ -1,1 +1,1 @@
-# MERN Todo App w/ Flux
+# Flux Stock Tracker

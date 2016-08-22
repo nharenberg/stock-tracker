@@ -18,7 +18,7 @@ export default class TodoList extends Component {
   componentDidMount() {
     TodoActions.getAllTodos();
     TodoStore.startListening(this._onChange);
-    TodoStore.on("NewStock", this.getStocks)
+    TodoStore.on("NEW_STOCK", this.getStocks);
   }
 
   componentWillUnmount() {
@@ -32,14 +32,14 @@ export default class TodoList extends Component {
   }
 
   getStocks(){
+    console.log("TodoStore.getStocks:", TodoStore.getStocks())
     this.setState({
       stocks: TodoStore.getStocks()
     })
-    console.log("TodoStore.getStocks:", TodoStore.getStocks())
   }
 
   render() {
-    let ListItems = [];
+    let ListItems;
 
       if(this.state.stocks) {
 
@@ -54,9 +54,9 @@ export default class TodoList extends Component {
       <table className="table">
         <thead>
           <tr>
-            <th>Stock Name</th>
             <th>Symbol</th>
-            <th>Value</th>
+            <th>Stock Name</th>
+            <th>Exchange</th>
           </tr>
         </thead>
         <tbody>

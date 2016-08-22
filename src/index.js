@@ -1,7 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ListItem from "ListItem";
-
 import App from './components/App'
 
 render(

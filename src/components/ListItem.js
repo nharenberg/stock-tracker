@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import moment from 'moment'
 
 export default class ListItem extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    let { _id, task, createdAt, isComplete } = this.props;
-
+    console.log("this.props:",this.props)
+    const { Symbol, Name, Exchange } = this.props
     return (
       <tr>
-        <td>{ task }</td>
-        <td></td>
-        <td></td>
+        <td>{ Symbol }</td>
+        <td>{ Name }</td>
+        <td>{ Exchange }</td>
       </tr>
     )    
   }

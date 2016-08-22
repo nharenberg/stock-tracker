@@ -16,8 +16,8 @@ const API = {
       .then(ServerActions.receiveOneTodo)
       .catch(console.error);
   },
-  searchAPI(name){
-    let url = 'http://dev.markitondemand.com/MODApis/Api/v2/Lookup/jsonp?input=NFLX'
+  searchAPI(symbol){
+    let url = `http://dev.markitondemand.com/MODApis/Api/v2/Lookup/jsonp?input=${symbol}`
     jsonp(url, function (err, data) {
       console.log("data:", data)
   ServerActions.findStock(data)
