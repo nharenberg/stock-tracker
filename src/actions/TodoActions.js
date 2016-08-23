@@ -7,6 +7,10 @@ const TodoActions = {
   },
   searchAPI(name) {
     API.searchAPI(name)
+  },
+  getQuote(name) {
+    console.log("another something")
+    API.getQuote(name)
   }
 }
 

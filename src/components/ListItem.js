@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OneStock from "./OneStock"
+import TodoActions from "../actions/TodoActions"
 import { Link, browserHistory } from "react-router"
 
 export default class ListItem extends Component {
@@ -9,7 +10,8 @@ export default class ListItem extends Component {
   }
 
   navigateToOneStock(Symbol) {
-    browserHistory.push(`/oneStock/${Symbol}`)
+    TodoActions.getQuote(Symbol)
+   browserHistory.push(`/oneStock/${Symbol}`)
   }
 
   render() {

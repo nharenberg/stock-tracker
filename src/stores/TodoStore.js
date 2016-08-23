@@ -57,6 +57,9 @@ class TodoStore extends EventEmitter {
   getStocks() {
     return _stock;
   }
+  getOneQuote() {
+    return _quote;
+  }
 }
 
 export default new TodoStore();
