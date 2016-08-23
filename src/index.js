@@ -21,7 +21,7 @@ render(
   <Router history = {browserHistory}>
     <Route path='/' component ={Main}>
       <IndexRoute component={App}/>
-      <Route path="/OneStock/:symbol" component ={OneStock}/>
+      <Route path="/oneStock/:symbol" component ={OneStock}/>
     </Route>
   </Router>,
   document.getElementById("root")

@@ -6,14 +6,8 @@ export default class OneStock extends Component {
   }
 
   render() {
-    console.log("this.props:",this.props)
-    const { Symbol, Name, Exchange } = this.props
     return (
-      <tr>
-        <td>{ Symbol }</td>
-        <td>{ Name }</td>
-        <td>{ Exchange }</td>
-      </tr>
+      <p>hello</p>
     )    
   }
 }
