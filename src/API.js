@@ -20,8 +20,14 @@ const API = {
     let url = `http://dev.markitondemand.com/MODApis/Api/v2/Lookup/jsonp?input=${symbol}`
       jsonp(url, function (err, data) {
         console.log("data:", data)
-    ServerActions.findStock(data)
+      ServerActions.findStock(data)
     })
+  },
+  getQuote(symbol){
+    let url = `http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=${symbol}`
+      jsonp(url, function (err, data) {
+        ServerActions.findQuote(data)
+      })
   }
 }
 

@@ -4,6 +4,7 @@ import uuid from 'uuid';
 
 let _todos = [];
 let _stock;
+let _quote;
 
 class TodoStore extends EventEmitter {
   constructor() {
@@ -34,6 +35,10 @@ class TodoStore extends EventEmitter {
             _stock = action.data;
           this.emit('NEW_STOCK');
           break;
+          case "FOUND_ONE_QUOTE":
+            _quote = action.data;
+            this.emit("NEW_QUOTE");
+          break;
       }
     });
   }
@@ -50,7 +55,7 @@ class TodoStore extends EventEmitter {
     return _todos;
   }
   getStocks() {
-    return _stock
+    return _stock;
   }
 }
 

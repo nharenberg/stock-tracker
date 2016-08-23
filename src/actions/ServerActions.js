@@ -18,7 +18,12 @@ const ServerActions = {
       type: "FIND_ONE_STOCK",
       data
     })
+  },
+  findQuote(data) {
+    AppDispatcher.dispatch({
+    type: 'FOUND_ONE_QUOTE',
+    data
+    })
   }
 }
-
 export default ServerActions
