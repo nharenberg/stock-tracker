@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ListItem extends Component {
+export default class OneStock extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,11 +9,11 @@ export default class ListItem extends Component {
     console.log("this.props:",this.props)
     const { Symbol, Name, Exchange } = this.props
     return (
-      <tr onClick={() => console.log("hello from the tr")}>
+      <tr>
         <td>{ Symbol }</td>
         <td>{ Name }</td>
         <td>{ Exchange }</td>
       </tr>
-    )
+    )    
   }
 }

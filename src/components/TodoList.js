@@ -43,15 +43,15 @@ export default class TodoList extends Component {
 
       if(this.state.stocks) {
 
-         ListItems = this.state.stocks.map(stock => {
+         ListItems = this.state.stocks.map((stock, index) => {
           return (
 
-            <ListItem {...stock}/>
+            <ListItem key={index} {...stock}/>
           )
         })
       }
     return (
-      <table className="table">
+      <table className="table table-hover">
         <thead>
           <tr>
             <th>Symbol</th>
